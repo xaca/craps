@@ -1,21 +1,6 @@
 body{
 	background-color: #fdfcdc;
 }
-#titulo{
-  margin: 0 auto;
-  width: 152px;
-  margin-bottom: 40px;
-  color:#0081a7;
-}
-#mensaje_texto{
-  position: absolute;
-  top: 30px;
-  left: 40px;
-  width: 255px;
-  /*border: 1px solid black;*/
-  height: 140px;
-  background-color: #fed9b7;
-}
 .dado{
   background-image:url(https://i.pinimg.com/originals/0b/61/ba/0b61ba096406865f0e76a9b07e36dc69.png);
   background-position:-803px;
@@ -41,6 +26,21 @@ body{
 }
 
 /* Ventana */
+#titulo{
+  margin: 0 auto;
+  width: 152px;
+  margin-bottom: 40px;
+  color:#0081a7;
+}
+#mensaje_texto{
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  width: 255px;
+  /*border: 1px solid black;*/
+  height: 140px;
+}
+
 body{
   margin: 0;
   padding: 0;
@@ -61,7 +61,7 @@ body{
 }
 .login_content{
   position: relative;
-  background-color: #999;
+  background-color: #fed9b7;
   width: 353px;
   height: 230px;
   margin-right: auto;
@@ -72,7 +72,7 @@ body{
 }
 .close_button{
   position: absolute;
-  background-color: #333;
+  background-color: #fed9b7;;
   top: 10px;
   right: 10px;
   color: white;
