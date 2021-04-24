@@ -12,7 +12,6 @@ body{
   width:315px;
   margin:0 auto;
 }
-
 #boton_tirar{
   display:block;
   width:100px;
@@ -24,7 +23,15 @@ body{
   border-radius:10px;
   cursor:pointer;
 }
-
+.pata{
+  width:150px;
+  margin:0 auto; 
+  text-align: center;
+}
+.creditos{
+  margin:0 auto;
+  width: 197px;
+}
 /* Ventana */
 #titulo{
   margin: 0 auto;
