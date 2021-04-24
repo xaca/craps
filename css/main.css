@@ -1,7 +1,12 @@
 body{
 	background-color: #fdfcdc;
 }
-
+#titulo{
+  margin: 0 auto;
+  width: 152px;
+  margin-bottom: 40px;
+  color:#0081a7;
+}
 .dado{
   background-image:url(https://i.pinimg.com/originals/0b/61/ba/0b61ba096406865f0e76a9b07e36dc69.png);
   background-position:-803px;
