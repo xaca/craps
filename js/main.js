@@ -36,12 +36,11 @@ function jugar(){
 
   turno = turno + 1;
 
-  mostrarMensaje("Prueba");
   if(total_tiro==7 || total_tiro==11)
   {
   	turno = 1;
   	console.log("Se reinicio el turno");
-  	//mostrarMensaje("Gano la partida");
+  	mostrarMensaje("Gano la partida");
   }
 
 }
