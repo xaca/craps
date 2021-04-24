@@ -79,7 +79,7 @@ body{
 }
 .close_button{
   position: absolute;
-  background-color: #fed9b7;;
+  background-color: #f07167;
   top: 10px;
   right: 10px;
   color: white;
@@ -94,7 +94,7 @@ body{
 }
 .close_button:hover{
   background-color: white;
-  color: #333;
+  color: #0081a7;
 }
 #input_name{
   position: absolute;
