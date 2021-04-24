@@ -13,6 +13,7 @@ function init(){
 
 	dado1 = document.getElementById("dado1");
 	dado2 = document.getElementById("dado2");
+  cerrar.addEventListener("click",cerrarVentana);
 
 }
 
@@ -30,16 +31,30 @@ function jugar(){
   actualizarDado(dado1,tiro_1);
   actualizarDado(dado2,tiro_2);
 
-  console.log("turno actual",turno);
+  //console.log("turno actual",turno);
   total_tiro = tiro_1 + tiro_2;
 
   turno = turno + 1;
 
+  mostrarMensaje("Prueba");
   if(total_tiro==7 || total_tiro==11)
   {
-  	alert("Gano la partida");
   	turno = 1;
   	console.log("Se reinicio el turno");
+  	//mostrarMensaje("Gano la partida");
   }
 
+}
+
+function mostrarMensaje(mensaje){
+  mensaje_texto.innerHTML = mensaje;
+  abrirVentana();
+}
+
+function abrirVentana(){  
+  ventana.className = "ligthbox animate__animated animate__fadeIn";
+}
+
+function cerrarVentana(){
+  ventana.className = "ligthbox hidden";
 }

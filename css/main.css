@@ -7,6 +7,15 @@ body{
   margin-bottom: 40px;
   color:#0081a7;
 }
+#mensaje_texto{
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  width: 255px;
+  /*border: 1px solid black;*/
+  height: 140px;
+  background-color: #fed9b7;
+}
 .dado{
   background-image:url(https://i.pinimg.com/originals/0b/61/ba/0b61ba096406865f0e76a9b07e36dc69.png);
   background-position:-803px;
@@ -29,4 +38,86 @@ body{
   border:0;
   border-radius:10px;
   cursor:pointer;
+}
+
+/* Ventana */
+body{
+  margin: 0;
+  padding: 0;
+}
+.show{
+  display:block;
+}
+.hidden{
+  display:none;
+}
+.ligthbox{
+  position: fixed;
+  top:0px;
+  left:0px;
+  width: 100%;
+  height: 100%;
+  background:rgba(0,0,0,.6);
+}
+.login_content{
+  position: relative;
+  background-color: #999;
+  width: 353px;
+  height: 230px;
+  margin-right: auto;
+  margin-left: auto;
+  top:50%;
+  margin-top: -115px;
+  border-radius: 5%;
+}
+.close_button{
+  position: absolute;
+  background-color: #333;
+  top: 10px;
+  right: 10px;
+  color: white;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 23px;
+  line-height: 34px;
+  font-family: verdana;
+}
+.close_button:hover{
+  background-color: white;
+  color: #333;
+}
+#input_name{
+  position: absolute;
+  top: 70px;
+  left: 60px;
+  width: 210px;
+  height: 28px;
+  border-radius: 6px;
+}
+#input_password{
+  position: absolute;
+  top: 113px;
+  left: 60px;
+  width: 210px;
+  height: 28px;
+  border-radius: 6px;
+}
+#button_login{
+  position: absolute;
+  top: 160px;
+  left: 60px;
+  width: 110px;
+  height: 40px;
+  border-radius: 5px;
+}
+#button_cancel{
+  position: absolute;
+  top: 160px;
+  left: 175px;
+  width: 101px;
+  height: 40px;
+  border-radius: 5px;
 }
