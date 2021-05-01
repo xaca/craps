@@ -1,5 +1,5 @@
 body{
-	background-color: #fdfcdc;
+	background-color: #845e9e;
 }
 .dado{
   background-image:url(https://i.pinimg.com/originals/0b/61/ba/0b61ba096406865f0e76a9b07e36dc69.png);
@@ -32,13 +32,19 @@ body{
   margin:0 auto;
   width: 197px;
 }
-/* Ventana */
 #titulo{
   margin: 0 auto;
-  width: 152px;
+  width: 350px;
   margin-bottom: 40px;
-  color:#0081a7;
+  color:#1e092d;
+  font-size:46px;
+  font-weight: bold;
+  background-color: #c096dc;
+  text-align: center;
+  margin-top: 10px;
+  font-family: verdana;
 }
+/* Ventana */
 #mensaje_texto{
   position: absolute;
   top: 30px;
@@ -47,10 +53,10 @@ body{
   /*border: 1px solid black;*/
   height: 140px;
 }
-
 body{
   margin: 0;
   padding: 0;
+  background-image: url(../images/dice_head.png);
 }
 .show{
   display:block;
@@ -76,6 +82,8 @@ body{
   top:50%;
   margin-top: -115px;
   border-radius: 5%;
+  text-align: center;
+  font-size: 18px;
 }
 .close_button{
   position: absolute;
@@ -95,36 +103,4 @@ body{
 .close_button:hover{
   background-color: white;
   color: #0081a7;
-}
-#input_name{
-  position: absolute;
-  top: 70px;
-  left: 60px;
-  width: 210px;
-  height: 28px;
-  border-radius: 6px;
-}
-#input_password{
-  position: absolute;
-  top: 113px;
-  left: 60px;
-  width: 210px;
-  height: 28px;
-  border-radius: 6px;
-}
-#button_login{
-  position: absolute;
-  top: 160px;
-  left: 60px;
-  width: 110px;
-  height: 40px;
-  border-radius: 5px;
-}
-#button_cancel{
-  position: absolute;
-  top: 160px;
-  left: 175px;
-  width: 101px;
-  height: 40px;
-  border-radius: 5px;
 }

@@ -3,7 +3,8 @@ var tiro_2;
 var posiciones = [0,-160,-320,-481,-642,-803];
 var dado1,dado2,boton_tirar;
 var total_tiro;
-var turno = 1;
+var turno = 1, punto = 0;
+var resultado = document.getElementById("resultado");
 
 window.onload = init;
 
@@ -26,6 +27,7 @@ function actualizarDado(ref,cara){
 }
 
 function jugar(){
+
   tiro_1 = tirardado();//Retorna un numero entre 1 y 6
   tiro_2 = tirardado();
   actualizarDado(dado1,tiro_1);
@@ -34,15 +36,45 @@ function jugar(){
   //console.log("turno actual",turno);
   total_tiro = tiro_1 + tiro_2;
 
-  turno = turno + 1;
-
-  if(total_tiro==7 || total_tiro==11)
+  if((total_tiro==7 || total_tiro==11) && turno==1 )
   {
-  	turno = 1;
-  	console.log("Se reinicio el turno");
-  	mostrarMensaje("Gano la partida");
+    mostrarMensaje("Gano la partida 😀");
   }
+  else
+  {
+    if((total_tiro==2 || total_tiro==3 || total_tiro==12) && turno==1)
+    {
+      mostrarMensaje("Perdio la partida 😪");
+    }
+    else
+    {
+      if(turno==1)
+      {
+        punto = total_tiro;
+        console.log("Punto es ",punto);
+      }
 
+      if(total_tiro == punto && turno>1)
+      {
+        mostrarMensaje("Gano la partida 😀");
+        turno = 1;
+        punto = 0;
+      }
+      else
+      {
+        if(total_tiro == 7)
+        {
+          mostrarMensaje("Perdio la partida 😪");
+          turno = 1;
+          punto = 0;
+        }
+        else
+        {
+          turno = turno + 1;
+        }
+      }
+    }
+  }
 }
 
 function mostrarMensaje(mensaje){
