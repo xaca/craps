@@ -5,6 +5,7 @@ var dado1,dado2,boton_tirar;
 var total_tiro;
 var turno = 1, punto = 0;
 var resultado = document.getElementById("resultado");
+var ganar,perder,id_ganar;
 
 window.onload = init;
 
@@ -16,6 +17,8 @@ function init(){
 	dado2 = document.getElementById("dado2");
   cerrar.addEventListener("click",cerrarVentana);
 
+  ganar = new Howl({src: ['./sonidos/Kids Cheering-SoundBible.com-681813822.mp3']});
+  //perder = new Howl({src: ['../sonidos/perder.mp3']});
 }
 
 function tirardado(){
@@ -36,6 +39,12 @@ function jugar(){
   //console.log("turno actual",turno);
   total_tiro = tiro_1 + tiro_2;
 
+  if(!ganar.playing(id_ganar))
+  {
+    id_ganar = ganar.play();
+  }
+  
+
   if((total_tiro==7 || total_tiro==11) && turno==1 )
   {
     mostrarMensaje("Gano la partida 😀");
@@ -45,6 +54,10 @@ function jugar(){
     if((total_tiro==2 || total_tiro==3 || total_tiro==12) && turno==1)
     {
       mostrarMensaje("Perdio la partida 😪");
+      /*if(!perder.playing(id_perder))
+      {
+        id_perder = perder.play();
+      }*/
     }
     else
     {
@@ -88,4 +101,5 @@ function abrirVentana(){
 
 function cerrarVentana(){
   ventana.className = "ligthbox hidden";
+  ganar.stop();
 }
